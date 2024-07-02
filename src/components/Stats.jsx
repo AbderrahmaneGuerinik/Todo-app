@@ -62,7 +62,11 @@ function Stats() {
           } inline ml-[10px]  ${
             selected !== 2 && dark ? "hover:text-white" : ""
           }
-           ${selected !== 2 && !dark ? "hover:text-[#494C6B]" : ""}
+           ${
+             selected !== 2 && !dark
+               ? " text-[#9495A5] hover:text-[#494C6B]"
+               : ""
+           }
            `}
           onClick={() => {
             setSelected(2);

@@ -23,9 +23,7 @@ function Todos() {
   return (
     <ul
       className={`w-[min(50rem,90%)] translate-y-[-40px] z-10 overflow-auto ${
-        dark
-          ? "shadow-[ 0px 35px 50px -15px rgba(0, 0, 0, 0.50)]"
-          : "shadow-[ 0px 35px 50px -15px rgba(194, 195, 214, 0.50)]"
+        dark ? "shadow-d" : "shadow-w"
       }`}
     >
       {todos.map((todo, i) => {
