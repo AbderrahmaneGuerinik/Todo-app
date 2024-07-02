@@ -9,8 +9,8 @@ function Header() {
     <div
       className={`h-[35svh] ${
         isDark
-          ? "bg-[url('../../images/bg-desktop-dark.jpg')]"
-          : "bg-[url('../../images/bg-desktop-light.jpg')]"
+          ? "bg-[url('../../public/images/bg-desktop-dark.jpg')]"
+          : "bg-[url('../../public/images/bg-desktop-light.jpg')]"
       } bg-no-repeat
       bg-cover bg-center`}
     >
