@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 72.5%;
+}
+body {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+input[type="checkbox"]::before {
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  border-image: linear-gradient(to bottom, #60c7e1b5, #b762e1d3);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes check {
+  from {
+    transform: scale(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+  .hidden {
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media only screen and (max-height: 665px) {
+  ul {
+    transform: translateY(5px) !important;
+  }
+  main {
+    height: 100svh !important;
+  }
+}
