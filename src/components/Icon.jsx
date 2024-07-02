@@ -4,7 +4,7 @@ function Icon() {
   const { onChangeTheme, dark } = useTodos();
   return (
     <img
-      src={`${dark ? "Todo-app/images/icon-sun.svg" : "/images/icon-moon.svg"}`}
+      src={`${dark ? "./images/icon-sun.svg" : "/images/icon-moon.svg"}`}
       alt="icon-sun"
       className="h-[2.4rem] w-[2.4rem]"
       role="button"
