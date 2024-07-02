@@ -16,11 +16,13 @@ function Input() {
   }
 
   return (
-    <div
-      className="input-wrapper relative before:content-['']
-        before:inline-block before:h-[23px] before:w-[23px] before:rounded-[50%] before:bg-transparent before:absolute before:left-[2rem]
-        before:top-[50%] before:translate-y-[-50%] before:border-[1px] before:border-solid before:border-[#393A4B] w-[min(90%,50rem)]"
-    >
+    <div className="input-wrapper relative w-[min(90%,50rem)]">
+      <button
+        className="inline-block h-[23px] w-[23px]  rounded-[50%]  bg-transparent  absolute  left-[2rem]
+         top-[50%]  translate-y-[-50%]  border-[1px]  border-solid  border-[#393A4B]"
+        onClick={(e) => handleSubmit(e)}
+      />
+
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
