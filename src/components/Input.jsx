@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTodos } from "./TodoContext";
 
-function Input({ dark, onAddTodo }) {
+function Input() {
   const [query, setQuery] = useState("");
+  const { dark, onAddTodo } = useTodos();
 
   function handleSubmit(e) {
     e.preventDefault();

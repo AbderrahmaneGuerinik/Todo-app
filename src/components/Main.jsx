@@ -1,17 +1,11 @@
 import { closestCorners, DndContext } from "@dnd-kit/core";
 import Stats from "./Stats";
 import Todos from "./Todos";
+import { useTodos } from "./TodoContext";
 
-function Main({
-  dark,
-  todos,
-  setTodos,
-  onDeleteTodo,
-  type,
-  onChangeType,
-  onComplete,
-  onClearCompleted,
-}) {
+function Main() {
+  const { dark } = useTodos();
+
   return (
     <main
       className={`flex flex-col items-center h-[calc(100svh-229.6px)] ${
@@ -19,22 +13,9 @@ function Main({
       }`}
     >
       <DndContext collisionDetection={closestCorners}>
-        <Todos
-          dark={dark}
-          todos={todos}
-          setTodos={setTodos}
-          onDeleteTodo={onDeleteTodo}
-          type={type}
-          onComplete={onComplete}
-        />
+        <Todos />
       </DndContext>
-      <Stats
-        dark={dark}
-        todos={todos}
-        onChangeType={onChangeType}
-        type={type}
-        onClearCompleted={onClearCompleted}
-      />
+      <Stats />
       <p className="font-josefin text-[#5B5E7E] font-normal text-center fixed bottom-[10px] z-[1]">
         Drag and drop to reorder list
       </p>

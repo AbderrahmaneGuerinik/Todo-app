@@ -1,17 +1,15 @@
 import { useState } from "react";
+import { useTodos } from "./TodoContext";
 
 function Task({
   isFirst = false,
   id,
-  dark,
   name,
-  todos,
-  onDeleteTodo,
-  onComplete,
   onDragStart,
   onDragEnter,
   onDragEnd,
 }) {
+  const { dark, todos, onDeleteTodo, onComplete } = useTodos();
   const isChecked =
     todos.filter((todo) => todo.id === id && todo.status === "completed")
       .length > 0;

@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import Task from "./Task";
+import { useTodos } from "./TodoContext";
 
-function Todos({ dark, todos, setTodos, onDeleteTodo, type, onComplete }) {
+function Todos() {
+  const { todos, setTodos, type } = useTodos();
   const dragTask = useRef(0);
   const dragOverTask = useRef(0);
 
@@ -26,12 +28,8 @@ function Todos({ dark, todos, setTodos, onDeleteTodo, type, onComplete }) {
             <Task
               isFirst={i === 0}
               id={todo.id}
-              dark={dark}
               name={todo.name}
               key={todo.id}
-              onDeleteTodo={onDeleteTodo}
-              onComplete={onComplete}
-              todos={todos}
               onDragStart={() => handleDragStart(i)}
               onDragEnter={() => handleDragEnter(i)}
               onDragEnd={handleSort}

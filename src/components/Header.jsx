@@ -1,8 +1,10 @@
 import Input from "./Input";
 import Heading from "./Heading";
 import Icon from "./Icon";
+import { useTodos } from "./TodoContext";
 
-function Header({ isDark, onChangeTheme, onAddTodo }) {
+function Header() {
+  const { dark: isDark } = useTodos();
   return (
     <div
       className={`h-[35svh] ${
@@ -15,9 +17,9 @@ function Header({ isDark, onChangeTheme, onAddTodo }) {
       <div className="flex items-center justify-center h-full gap-[2rem] flex-col">
         <div className="flex items-center justify-between w-[min(49rem,90%)]">
           <Heading />
-          <Icon onChangeTheme={onChangeTheme} dark={isDark} />
+          <Icon />
         </div>
-        <Input dark={isDark} onAddTodo={onAddTodo} />
+        <Input />
       </div>
     </div>
   );

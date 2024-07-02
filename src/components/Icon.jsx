@@ -1,4 +1,7 @@
-function Icon({ onChangeTheme, dark }) {
+import { useTodos } from "./TodoContext";
+
+function Icon() {
+  const { onChangeTheme, dark } = useTodos();
   return (
     <img
       src={`${

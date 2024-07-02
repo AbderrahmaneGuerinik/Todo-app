@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTodos } from "./TodoContext";
 
-function Stats({ dark, todos, onChangeType, type, onClearCompleted }) {
+function Stats() {
+  const { dark, todos, onChangeType, type, onClearCompleted } = useTodos();
   const [selected, setSelected] = useState(0);
+
   return (
     <div
       className={`bg-[#25273D] w-[min(50rem,90%)] px-[2rem] flex items-center justify-between py-[1.4rem] rounded-b-[5px]
