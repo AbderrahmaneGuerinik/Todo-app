@@ -56,7 +56,7 @@ function Task({
           id={id}
         />
         <img
-          src="/images/X.png"
+          src="./images/X.png"
           alt="delete-icon"
           role="button"
           className={`absolute right-[2rem] top-[50%] translate-y-[-50%] h-[1.3rem] w-[1.3rem] ${
