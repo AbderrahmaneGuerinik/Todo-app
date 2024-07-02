@@ -8,7 +8,7 @@ function Main() {
   return (
     <main
       className={`flex flex-col items-center h-[calc(100svh-229.6px)] ${
-        dark ? "bg-[#25273D]" : "bg-[#FAFAFA]"
+        dark ? "bg-[#171823]" : "bg-[#FAFAFA]"
       }`}
     >
       <Todos />

@@ -3,7 +3,7 @@ import Task from "./Task";
 import { useTodos } from "./TodoContext";
 
 function Todos() {
-  const { todos, setTodos, type } = useTodos();
+  const { todos, setTodos, type, dark } = useTodos();
   const dragTask = useRef(0);
   const dragOverTask = useRef(0);
 
@@ -21,7 +21,13 @@ function Todos() {
     setTodos(tasks);
   }
   return (
-    <ul className="w-[min(50rem,90%)] translate-y-[-40px] z-10 overflow-auto">
+    <ul
+      className={`w-[min(50rem,90%)] translate-y-[-40px] z-10 overflow-auto ${
+        dark
+          ? "shadow-[ 0px 35px 50px -15px rgba(0, 0, 0, 0.50)]"
+          : "shadow-[ 0px 35px 50px -15px rgba(194, 195, 214, 0.50)]"
+      }`}
+    >
       {todos.map((todo, i) => {
         if (type === "all" || todo.status === type)
           return (
